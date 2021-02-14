@@ -12,15 +12,23 @@ import '@/style/iconfont/iconfont.css';
 import 'amfe-flexible';
 Vue.config.productionTip = false
 
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+// import 'element-ui/lib/theme-chalk/index.css';
+import '@/style/theme/index.css';
 Vue.use(ElementUI);
 
 Vue.prototype.$axios = axios;
 
 router.beforeEach((to, from, next) => {
   if (to.path === "/login") {
-    next()
+    if (!cookieData("get", "token")) {
+      next()
+    } else {
+      next("/");
+    }
   } else {
     if (cookieData("get", "token")) {
       next()

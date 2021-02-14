@@ -5,6 +5,9 @@ import mainpage from '@/view/mainpage/index'
 import page1 from '@/view/page/page1'
 import page2 from '@/view/page/page2'
 import page3 from '@/view/page/page3'
+import page4 from '@/view/page/page4'
+import page5 from '@/view/page/page5'
+
 
 
 Vue.use(Router)
@@ -32,6 +35,15 @@ export default new Router({
           name: 'page3',
           component: page3
         },
+        {
+          path: 'page4',
+          name: 'page4',
+          component: page4
+        },{
+          path: 'page5',
+          name: 'page5',
+          component: page5
+        }
       ]
     },
     {

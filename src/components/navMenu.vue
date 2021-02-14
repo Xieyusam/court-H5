@@ -74,7 +74,7 @@ export default {
   border-top-right-radius: 14px;
 }
 .nav-child {
-  font-size: 0.1rem;
+  font-size: 0.3rem;
   height: 1.4rem;
   width: 1.4rem;
   color: #ffffff;
